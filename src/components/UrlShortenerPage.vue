@@ -221,6 +221,7 @@ select {
 
 .list-item-container a {
   padding: 5px 0;
+  cursor: pointer;
 }
 
 .list-item-container img {
