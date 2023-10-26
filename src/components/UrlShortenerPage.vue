@@ -5,7 +5,7 @@
         <img src="../assets/logo.svg" alt="Logo" />
       </div>
       <div class="list-container">
-        <div class="list-title">Myshortened URLs</div>
+        <div class="list-title">My shortened URLs</div>
         <div class="list-items">
           <div v-for="(item, key) in shortenedUrlsList" :key="key">
             <div class="list-item-container">
@@ -83,9 +83,6 @@ export default {
             const index = this.shortenedUrlsList.indexOf(newItem);
             this.shortenedUrlsList.splice(index, 1, updatedItem);
 
-            console.log(
-              `Item ${newItem.shortenedUrl} processed after ${newItem.delay} ms`
-            );
           }, newItem.delay * 1000);
         }
 
