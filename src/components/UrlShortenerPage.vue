@@ -5,7 +5,7 @@
         <img src="../assets/logo.svg" alt="Logo" />
       </div>
       <div class="list-container">
-        <div class="list-title"> shortened URLs</div>
+        <div class="list-title">My shortened URLs</div>
         <div class="list-items">
           <div v-for="(item, key) in shortenedUrlsList" :key="key">
             <div class="list-item-container">
