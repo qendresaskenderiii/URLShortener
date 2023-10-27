@@ -94,6 +94,7 @@ export default {
       }
 
       this.urlToShorten = "";
+      this.expirationTimestamp = 0;
     },
     removeLink(item) {
       const index = this.shortenedUrlsList.indexOf(item);
