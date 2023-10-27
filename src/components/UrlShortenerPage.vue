@@ -82,7 +82,6 @@ export default {
             const updatedItem = { ...newItem, color: "black", disabled: true };
             const index = this.shortenedUrlsList.indexOf(newItem);
             this.shortenedUrlsList.splice(index, 1, updatedItem);
-
           }, newItem.delay * 1000);
         }
 
@@ -125,7 +124,7 @@ body {
 .logo-container img {
   width: 100%;
   height: 100%;
-  max-width: 200px;
+  max-width: 215px;
 }
 
 .sidebar-container {
@@ -140,17 +139,16 @@ body {
 }
 
 .list-container {
-  margin-top: 50px;
-  margin: 50px 0;
-  text-align: left;
-  justify-content: flex-start;
-  align-items: flex-start;
+  width: 100%;
+  max-width: 215px;
+  margin-top: 53px;
 }
 
 .list-title {
   font-weight: 900;
   font-size: 20px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .main-container {
@@ -181,7 +179,6 @@ select {
   font-size: 19px;
   padding: 15px;
   color: grey;
-  border: 1px solid grey;
 }
 
 .flex-column {
@@ -229,7 +226,7 @@ select {
   height: 15px;
   padding-left: 10px;
   position: absolute;
-  right: -30px;
+  right: -32px;
 }
 .error-msg {
   color: red;
@@ -243,5 +240,111 @@ select {
   color: black;
   font-weight: 700;
   pointer-events: none;
+}
+
+@media only screen and (max-width: 1040px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container select {
+    width: 65%;
+  }
+
+  .list-container {
+    max-width: 250px;
+  }
+
+  .list-item-container img {
+    right: 0px;
+  }
+
+  .flex-column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .sidebar-container {
+    width: 45%;
+  }
+
+  .main-container {
+    margin: 70px 30px 0 30px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .sidebar-container {
+    width: 55%;
+  }
+
+  .input-container select {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .full-container {
+    flex-direction: column-reverse;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+
+  .logo-container img {
+    max-width: 150px;
+  }
+
+  .main-container {
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 30%;
+    max-height: 30%;
+  }
+
+  .main-container {
+    width: 90%;
+  }
+
+  input,
+  select {
+    padding: 12px 10px;
+  }
+
+  .error-msg {
+    bottom: -25px;
+    font-size: 15px;
+  }
+  .main-title,
+  .input-container {
+    margin-bottom: 20px;
+  }
+  .sidebar-container {
+    width: 90%;
+    max-width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-height: calc(70% - 180px);
+    height: calc(70% - 180px);
+  }
+
+  .list-container {
+    margin-top: 30px;
+    max-width: 85%;
+    padding-left: 30px;
+    height: 100%;
+  }
+
+  .list-items {
+    overflow-y: scroll;
+    height: 80%;
+    max-height: 80%;
+  }
 }
 </style>
